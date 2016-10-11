@@ -13,8 +13,24 @@
 		22157E731DA40214008B5E1C /* insurance_mobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22157E711DA40214008B5E1C /* insurance_mobile.xcdatamodeld */; };
 		22157E751DA40214008B5E1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22157E741DA40214008B5E1C /* Assets.xcassets */; };
 		22157E781DA40214008B5E1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22157E761DA40214008B5E1C /* LaunchScreen.storyboard */; };
-		5DA8E9721DAD5B0900FA0A0D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9711DAD5B0900FA0A0D /* SwiftyJSON.framework */; };
+		5DA8E9741DAD63AD00FA0A0D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8E9731DAD63AD00FA0A0D /* DataManager.swift */; };
+		5DA8E9751DAD66E300FA0A0D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9711DAD5B0900FA0A0D /* SwiftyJSON.framework */; };
+		5DA8E9761DAD66E300FA0A0D /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9711DAD5B0900FA0A0D /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5DA8E9771DAD66E300FA0A0D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5DA8E9761DAD66E300FA0A0D /* SwiftyJSON.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		22157E671DA40214008B5E1C /* insurance-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "insurance-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +42,7 @@
 		22157E771DA40214008B5E1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22157E791DA40214008B5E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DA8E9711DAD5B0900FA0A0D /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		5DA8E9731DAD63AD00FA0A0D /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DA8E9721DAD5B0900FA0A0D /* SwiftyJSON.framework in Frameworks */,
+				5DA8E9751DAD66E300FA0A0D /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +84,7 @@
 				22157E761DA40214008B5E1C /* LaunchScreen.storyboard */,
 				22157E791DA40214008B5E1C /* Info.plist */,
 				22157E711DA40214008B5E1C /* insurance_mobile.xcdatamodeld */,
+				5DA8E9731DAD63AD00FA0A0D /* DataManager.swift */,
 			);
 			path = "insurance-mobile";
 			sourceTree = "<group>";
@@ -89,6 +107,7 @@
 				22157E631DA40214008B5E1C /* Sources */,
 				22157E641DA40214008B5E1C /* Frameworks */,
 				22157E651DA40214008B5E1C /* Resources */,
+				5DA8E9771DAD66E300FA0A0D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22157E6D1DA40214008B5E1C /* ViewController.swift in Sources */,
+				5DA8E9741DAD63AD00FA0A0D /* DataManager.swift in Sources */,
 				22157E731DA40214008B5E1C /* insurance_mobile.xcdatamodeld in Sources */,
 				22157E6B1DA40214008B5E1C /* AppDelegate.swift in Sources */,
 			);

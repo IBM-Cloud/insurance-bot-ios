@@ -23,6 +23,14 @@ class ViewController: UIViewController {
         print(username.text);
         print(password.text);
         
+        
+        DataManager.sharedInstance.login(email: username.text!, password: password.text!) { (result) in
+            
+            //assume logged in for now
+            print("logged in")
+            self.performSegue(withIdentifier: "chatsegue", sender: nil)
+        }
+        /*
         let target = "http://dev-cloudco.mybluemix.net/login";
         
         let url:URL = URL(string: target)!
@@ -70,7 +78,7 @@ class ViewController: UIViewController {
         
         self.performSegue(withIdentifier: "chatsegue", sender: nil)
         
-        task.resume()
+        task.resume()*/
     }
     
     func convertStringToDictionary(text: String) -> [String:AnyObject]? {
