@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22157E6B1DA40214008B5E1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22157E6A1DA40214008B5E1C /* AppDelegate.swift */; };
-		22157E6D1DA40214008B5E1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22157E6C1DA40214008B5E1C /* ViewController.swift */; };
+		22157E6D1DA40214008B5E1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22157E6C1DA40214008B5E1C /* LoginViewController.swift */; };
 		22157E701DA40214008B5E1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22157E6E1DA40214008B5E1C /* Main.storyboard */; };
 		22157E731DA40214008B5E1C /* insurance_mobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22157E711DA40214008B5E1C /* insurance_mobile.xcdatamodeld */; };
 		22157E751DA40214008B5E1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22157E741DA40214008B5E1C /* Assets.xcassets */; };
@@ -16,6 +16,21 @@
 		5DA8E9741DAD63AD00FA0A0D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8E9731DAD63AD00FA0A0D /* DataManager.swift */; };
 		5DA8E9751DAD66E300FA0A0D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9711DAD5B0900FA0A0D /* SwiftyJSON.framework */; };
 		5DA8E9761DAD66E300FA0A0D /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9711DAD5B0900FA0A0D /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DA8E9791DAD682700FA0A0D /* UserNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8E9781DAD682700FA0A0D /* UserNavigationViewController.swift */; };
+		5DA8E97B1DAD6A1700FA0A0D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8E97A1DAD6A1700FA0A0D /* ChatViewController.swift */; };
+		5DA8E97F1DAD881200FA0A0D /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8E97E1DAD881200FA0A0D /* UIViewExtension.swift */; };
+		5DA8E9821DADC62E00FA0A0D /* avater.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9811DADC62E00FA0A0D /* avater.png */; };
+		5DA8E9841DADC6DF00FA0A0D /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9831DADC6DF00FA0A0D /* gear.png */; };
+		5DA8E9861DADC78100FA0A0D /* gear-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9851DADC78100FA0A0D /* gear-small.png */; };
+		5DA8E9881DADC8CC00FA0A0D /* chevron.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9871DADC8CC00FA0A0D /* chevron.png */; };
+		5DA8E98D1DADCBE500FA0A0D /* auto.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9891DADCBE500FA0A0D /* auto.png */; };
+		5DA8E98E1DADCBE500FA0A0D /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E98A1DADCBE500FA0A0D /* heart.png */; };
+		5DA8E98F1DADCBE500FA0A0D /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E98B1DADCBE500FA0A0D /* home.png */; };
+		5DA8E9901DADCBE500FA0A0D /* travel.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E98C1DADCBE500FA0A0D /* travel.png */; };
+		5DA8E9921DADD52B00FA0A0D /* mic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9911DADD52B00FA0A0D /* mic.png */; };
+		5DA8E9941DADD57300FA0A0D /* send.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9931DADD57300FA0A0D /* send.png */; };
+		5DA8E9971DADD75300FA0A0D /* mic@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9951DADD75300FA0A0D /* mic@2.png */; };
+		5DA8E9981DADD75300FA0A0D /* send@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9961DADD75300FA0A0D /* send@2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,7 +50,7 @@
 /* Begin PBXFileReference section */
 		22157E671DA40214008B5E1C /* insurance-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "insurance-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22157E6A1DA40214008B5E1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22157E6C1DA40214008B5E1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		22157E6C1DA40214008B5E1C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		22157E6F1DA40214008B5E1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22157E721DA40214008B5E1C /* insurance_mobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = insurance_mobile.xcdatamodel; sourceTree = "<group>"; };
 		22157E741DA40214008B5E1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +58,21 @@
 		22157E791DA40214008B5E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DA8E9711DAD5B0900FA0A0D /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		5DA8E9731DAD63AD00FA0A0D /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		5DA8E9781DAD682700FA0A0D /* UserNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNavigationViewController.swift; sourceTree = "<group>"; };
+		5DA8E97A1DAD6A1700FA0A0D /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		5DA8E97E1DAD881200FA0A0D /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		5DA8E9811DADC62E00FA0A0D /* avater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = avater.png; path = Assets.xcassets/avater.png; sourceTree = "<group>"; };
+		5DA8E9831DADC6DF00FA0A0D /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gear.png; path = Assets.xcassets/gear.png; sourceTree = "<group>"; };
+		5DA8E9851DADC78100FA0A0D /* gear-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gear-small.png"; path = "Assets.xcassets/gear-small.png"; sourceTree = "<group>"; };
+		5DA8E9871DADC8CC00FA0A0D /* chevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chevron.png; path = Assets.xcassets/chevron.png; sourceTree = "<group>"; };
+		5DA8E9891DADCBE500FA0A0D /* auto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = auto.png; path = Assets.xcassets/auto.png; sourceTree = "<group>"; };
+		5DA8E98A1DADCBE500FA0A0D /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heart.png; path = Assets.xcassets/heart.png; sourceTree = "<group>"; };
+		5DA8E98B1DADCBE500FA0A0D /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = Assets.xcassets/home.png; sourceTree = "<group>"; };
+		5DA8E98C1DADCBE500FA0A0D /* travel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = travel.png; path = Assets.xcassets/travel.png; sourceTree = "<group>"; };
+		5DA8E9911DADD52B00FA0A0D /* mic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mic.png; path = Assets.xcassets/mic.png; sourceTree = "<group>"; };
+		5DA8E9931DADD57300FA0A0D /* send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = send.png; path = Assets.xcassets/send.png; sourceTree = "<group>"; };
+		5DA8E9951DADD75300FA0A0D /* mic@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mic@2.png"; path = "Assets.xcassets/mic@2.png"; sourceTree = "<group>"; };
+		5DA8E9961DADD75300FA0A0D /* send@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "send@2.png"; path = "Assets.xcassets/send@2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,14 +107,18 @@
 		22157E691DA40214008B5E1C /* insurance-mobile */ = {
 			isa = PBXGroup;
 			children = (
+				5DA8E9801DADC62600FA0A0D /* images */,
 				22157E6A1DA40214008B5E1C /* AppDelegate.swift */,
-				22157E6C1DA40214008B5E1C /* ViewController.swift */,
+				22157E6C1DA40214008B5E1C /* LoginViewController.swift */,
 				22157E6E1DA40214008B5E1C /* Main.storyboard */,
 				22157E741DA40214008B5E1C /* Assets.xcassets */,
 				22157E761DA40214008B5E1C /* LaunchScreen.storyboard */,
 				22157E791DA40214008B5E1C /* Info.plist */,
 				22157E711DA40214008B5E1C /* insurance_mobile.xcdatamodeld */,
 				5DA8E9731DAD63AD00FA0A0D /* DataManager.swift */,
+				5DA8E9781DAD682700FA0A0D /* UserNavigationViewController.swift */,
+				5DA8E97A1DAD6A1700FA0A0D /* ChatViewController.swift */,
+				5DA8E97E1DAD881200FA0A0D /* UIViewExtension.swift */,
 			);
 			path = "insurance-mobile";
 			sourceTree = "<group>";
@@ -95,6 +129,25 @@
 				5DA8E9711DAD5B0900FA0A0D /* SwiftyJSON.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5DA8E9801DADC62600FA0A0D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				5DA8E9951DADD75300FA0A0D /* mic@2.png */,
+				5DA8E9961DADD75300FA0A0D /* send@2.png */,
+				5DA8E9931DADD57300FA0A0D /* send.png */,
+				5DA8E9911DADD52B00FA0A0D /* mic.png */,
+				5DA8E9891DADCBE500FA0A0D /* auto.png */,
+				5DA8E98A1DADCBE500FA0A0D /* heart.png */,
+				5DA8E98B1DADCBE500FA0A0D /* home.png */,
+				5DA8E98C1DADCBE500FA0A0D /* travel.png */,
+				5DA8E9871DADC8CC00FA0A0D /* chevron.png */,
+				5DA8E9851DADC78100FA0A0D /* gear-small.png */,
+				5DA8E9831DADC6DF00FA0A0D /* gear.png */,
+				5DA8E9811DADC62E00FA0A0D /* avater.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,8 +210,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA8E9821DADC62E00FA0A0D /* avater.png in Resources */,
+				5DA8E9901DADCBE500FA0A0D /* travel.png in Resources */,
+				5DA8E98E1DADCBE500FA0A0D /* heart.png in Resources */,
+				5DA8E9921DADD52B00FA0A0D /* mic.png in Resources */,
+				5DA8E9981DADD75300FA0A0D /* send@2.png in Resources */,
+				5DA8E9841DADC6DF00FA0A0D /* gear.png in Resources */,
+				5DA8E9941DADD57300FA0A0D /* send.png in Resources */,
 				22157E781DA40214008B5E1C /* LaunchScreen.storyboard in Resources */,
+				5DA8E9971DADD75300FA0A0D /* mic@2.png in Resources */,
 				22157E751DA40214008B5E1C /* Assets.xcassets in Resources */,
+				5DA8E98D1DADCBE500FA0A0D /* auto.png in Resources */,
+				5DA8E98F1DADCBE500FA0A0D /* home.png in Resources */,
+				5DA8E9881DADC8CC00FA0A0D /* chevron.png in Resources */,
+				5DA8E9861DADC78100FA0A0D /* gear-small.png in Resources */,
 				22157E701DA40214008B5E1C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,9 +235,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22157E6D1DA40214008B5E1C /* ViewController.swift in Sources */,
+				5DA8E9791DAD682700FA0A0D /* UserNavigationViewController.swift in Sources */,
+				22157E6D1DA40214008B5E1C /* LoginViewController.swift in Sources */,
 				5DA8E9741DAD63AD00FA0A0D /* DataManager.swift in Sources */,
 				22157E731DA40214008B5E1C /* insurance_mobile.xcdatamodeld in Sources */,
+				5DA8E97F1DAD881200FA0A0D /* UIViewExtension.swift in Sources */,
+				5DA8E97B1DAD6A1700FA0A0D /* ChatViewController.swift in Sources */,
 				22157E6B1DA40214008B5E1C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
