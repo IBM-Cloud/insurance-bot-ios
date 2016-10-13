@@ -19,10 +19,10 @@ class DataManager {
     func login(email:String, password:String, completion:(AnyObject?)->()) -> Void {
         // perform login, then call completion callback with result 
         
-        var responseData = Bool()
         NSLog("DataManager| email: " + email)
         NSLog("DataManager| password: " + password)
         
+        //todo: move to Info.plist
         let target = "http://dev-cloudco.mybluemix.net/login"
         
         let url:URL = URL(string: target)!
@@ -62,14 +62,14 @@ class DataManager {
             }
             
             if let outcome = dictionary?["outcome"] {
-                responseData = (outcome.isEqual("success"))
+                self.loginStatus = (outcome.isEqual("success"))
                 NSLog("DataManager| login status: " + (outcome as! String))
             }
             
         }
         task.resume()
 
-        completion(responseData as AnyObject?)
+        completion(loginStatus as AnyObject?)
     }
     
     func convertStringToDictionary(text: String) -> [String:AnyObject]? {
