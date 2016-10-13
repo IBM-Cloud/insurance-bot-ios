@@ -10,16 +10,17 @@ import Foundation
 import UIKit
 import SwiftyJSON
 
-class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     @IBOutlet var chatTableView: UITableView!
   
+    @IBOutlet var textInput: UITextField!
     @IBOutlet var bottomBarConstraint: NSLayoutConstraint!
     
-    let stubdata = [
+    var stubdata = [
         [
             "time":"9:30",
-            "message":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+            "message":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
             "from":"server"
         ], [
             "time":"9:31",
@@ -31,11 +32,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             "from":"server"
         ], [
             "time":"9:33",
-            "message":"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "message":"Excepteur sint occaecat cupidatat non proident",
             "from":"me"
         ], [
             "time":"9:34",
-            "message":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
+            "message":"Sed ut perspiciatis unde omnis iste natus error ",
             "from":"server"
         ]]
     
@@ -46,8 +47,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         nc.addObserver(self, selector: #selector(ChatViewController.keyboardWillHide(sender:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         chatTableView.rowHeight = UITableViewAutomaticDimension
-        chatTableView.estimatedRowHeight = 60
-        chatTableView.reloadData()
+        chatTableView.estimatedRowHeight = 200
+        refreshAndScrollTable(animated:false)
     }
     
     deinit {
@@ -59,6 +60,34 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func sendMessage(_ sender: AnyObject) {
+        let value = textInput.text
+        if ((value?.characters.count)! > 0) {
+            //print(value);
+            
+            //this is mock implementation, will need to be replaced
+            stubdata.append(["time":"9:40", "message":value!, "from":"me"])
+            refreshAndScrollTable(animated:true)
+            
+            textInput.text = ""
+        }
+    }
+    
+    func messageReceived(message:[String:Any]) {
+        
+    }
+    
+    func refreshAndScrollTable(animated:Bool) {
+        chatTableView.reloadData()
+        chatTableView.scrollToLastRow(animated:animated)
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        sendMessage(self)
+        return false
+    }
     
     func keyboardWillShow(sender: NSNotification) {
         let info = sender.userInfo!
@@ -86,7 +115,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let messageData = stubdata[indexPath.row]
         var cell:ChatMessageViewCell? = nil
-        if ( messageData["from"] == "me" ) {
+        if ( messageData["from"] != "me" ) {
             cell = tableView.dequeueReusableCell(withIdentifier: "serverChatViewCell") as? ChatMessageViewCell
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "myChatViewCell") as? ChatMessageViewCell

@@ -48,3 +48,16 @@ extension UIView {
         }
     }
 }
+
+
+extension UITableView {
+    func setOffsetToBottom(animated: Bool) {
+        self.setContentOffset(CGPoint(x:0, y:self.contentSize.height - self.frame.size.height), animated: true)
+    }
+    
+    func scrollToLastRow(animated: Bool) {
+        if self.numberOfRows(inSection: 0) > 0 {
+            self.scrollToRow(at: IndexPath(row:self.numberOfRows(inSection: 0) - 1, section: 0), at: .middle, animated: animated)
+        }
+    }
+}
