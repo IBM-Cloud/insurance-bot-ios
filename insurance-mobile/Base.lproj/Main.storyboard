@@ -428,7 +428,9 @@
                     <connections>
                         <outlet property="askQuestionButton" destination="gIu-M3-gpw" id="h64-Ob-gVk"/>
                         <outlet property="avatarImage" destination="3PS-nB-jv3" id="Sjc-pW-KEW"/>
+                        <outlet property="userFullNameLabel" destination="7YQ-ks-Nx4" id="CLn-Ed-sQO"/>
                         <outlet property="userImageContainerView" destination="Nwy-Jg-qm4" id="Lzw-fb-rpk"/>
+                        <outlet property="usernameLabel" destination="6ne-uz-RiD" id="gju-gl-EZ2"/>
                         <segue destination="TEL-K2-R01" kind="show" identifier="chatsegue" id="JuB-2N-L9H"/>
                     </connections>
                 </viewController>

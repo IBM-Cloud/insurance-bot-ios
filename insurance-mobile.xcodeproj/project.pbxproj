@@ -42,6 +42,11 @@
 		5DA8E9AE1DAF36C400FA0A0D /* left-arrow@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9AA1DAF36C400FA0A0D /* left-arrow@2.png */; };
 		5DA8E9AF1DAF36C400FA0A0D /* right-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9AB1DAF36C400FA0A0D /* right-arrow.png */; };
 		5DA8E9B01DAF36C400FA0A0D /* right-arrow@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9AC1DAF36C400FA0A0D /* right-arrow@2.png */; };
+		5DA8E9B41DB01B6200FA0A0D /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9B31DB01B6200FA0A0D /* Cartfile */; };
+		5DA8E9B71DB01BFD00FA0A0D /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9B51DB01BFD00FA0A0D /* CommonCrypto.framework */; };
+		5DA8E9B81DB01BFD00FA0A0D /* CommonCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9B51DB01BFD00FA0A0D /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DA8E9B91DB01BFD00FA0A0D /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9B61DB01BFD00FA0A0D /* Crypto.framework */; };
+		5DA8E9BA1DB01BFD00FA0A0D /* Crypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9B61DB01BFD00FA0A0D /* Crypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +56,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5DA8E9BA1DB01BFD00FA0A0D /* Crypto.framework in Embed Frameworks */,
+				5DA8E9B81DB01BFD00FA0A0D /* CommonCrypto.framework in Embed Frameworks */,
 				5DA8E9761DAD66E300FA0A0D /* SwiftyJSON.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -95,6 +102,9 @@
 		5DA8E9AA1DAF36C400FA0A0D /* left-arrow@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "left-arrow@2.png"; path = "Assets.xcassets/left-arrow@2.png"; sourceTree = "<group>"; };
 		5DA8E9AB1DAF36C400FA0A0D /* right-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "right-arrow.png"; path = "Assets.xcassets/right-arrow.png"; sourceTree = "<group>"; };
 		5DA8E9AC1DAF36C400FA0A0D /* right-arrow@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "right-arrow@2.png"; path = "Assets.xcassets/right-arrow@2.png"; sourceTree = "<group>"; };
+		5DA8E9B31DB01B6200FA0A0D /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		5DA8E9B51DB01BFD00FA0A0D /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/iOS/CommonCrypto.framework; sourceTree = "<group>"; };
+		5DA8E9B61DB01BFD00FA0A0D /* Crypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crypto.framework; path = Carthage/Build/iOS/Crypto.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +112,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA8E9B91DB01BFD00FA0A0D /* Crypto.framework in Frameworks */,
+				5DA8E9B71DB01BFD00FA0A0D /* CommonCrypto.framework in Frameworks */,
 				5DA8E9751DAD66E300FA0A0D /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +124,7 @@
 		22157E5E1DA40214008B5E1C = {
 			isa = PBXGroup;
 			children = (
+				5DA8E9B31DB01B6200FA0A0D /* Cartfile */,
 				22157E691DA40214008B5E1C /* insurance-mobile */,
 				22157E681DA40214008B5E1C /* Products */,
 				5DA8E9701DAD5B0900FA0A0D /* Frameworks */,
@@ -150,6 +163,8 @@
 		5DA8E9701DAD5B0900FA0A0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5DA8E9B51DB01BFD00FA0A0D /* CommonCrypto.framework */,
+				5DA8E9B61DB01BFD00FA0A0D /* Crypto.framework */,
 				5DA8E9711DAD5B0900FA0A0D /* SwiftyJSON.framework */,
 			);
 			name = Frameworks;
@@ -248,6 +263,7 @@
 				5DA8E9A11DAE7B2600FA0A0D /* home@2.png in Resources */,
 				5DA8E9821DADC62E00FA0A0D /* avater.png in Resources */,
 				5DA8E9B01DAF36C400FA0A0D /* right-arrow@2.png in Resources */,
+				5DA8E9B41DB01B6200FA0A0D /* Cartfile in Resources */,
 				5DA8E9A21DAE7B2600FA0A0D /* travel@2.png in Resources */,
 				5DA8E9901DADCBE500FA0A0D /* travel.png in Resources */,
 				5DA8E99F1DAE7B2600FA0A0D /* Contents.json in Resources */,

@@ -51,11 +51,11 @@ class DataManager {
             NSLog("DataManager| dataString :" + dataString!)
             let dictionary = self.convertStringToDictionary(text: dataString!)
             
-            if let fname = dictionary?["firstName"] {
+            if let fname = dictionary?["fname"] {
                 self.firstName = fname as! String
             }
             
-            if let lname = dictionary?["lastName"] {
+            if let lname = dictionary?["lname"] {
                 self.lastName = lname as! String
             }
             
