@@ -16,7 +16,7 @@ class DataManager {
     var userName = String()
     var loginStatus = false
 
-    func login(email:String, password:String, completion:(AnyObject?)->()) -> Void {
+    func login(email:String, password:String, completion:@escaping (Bool?)->()) -> Void {
         // perform login, then call completion callback with result 
         
         NSLog("DataManager| email: " + email)
@@ -42,6 +42,8 @@ class DataManager {
             guard let data = data, let _:URLResponse = response  , error == nil else {
                 print("error")
                 print(response)
+                
+                completion(false)
                 return
             }
             
@@ -66,10 +68,9 @@ class DataManager {
                 NSLog("DataManager| login status: " + (outcome as! String))
             }
             
+            completion(self.loginStatus)
         }
         task.resume()
-
-        completion(loginStatus as AnyObject?)
     }
     
     func convertStringToDictionary(text: String) -> [String:AnyObject]? {

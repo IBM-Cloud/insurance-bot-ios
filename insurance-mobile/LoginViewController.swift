@@ -14,8 +14,8 @@ class LoginViewController: UIViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet var username : UITextField!
-    
     @IBOutlet var password: UITextField!
+    @IBOutlet var stackView: UIStackView!
     
     @IBAction func login(sender: UIButton) {
         // do something
@@ -23,11 +23,14 @@ class LoginViewController: UIViewController {
         print(username.text);
         print(password.text);
         
-        DataManager.sharedInstance.login(email: username.text!, password: password.text!) { (result) in
-            
-            //assume logged in for now
-            print("logged in")
-            self.performSegue(withIdentifier: "loginsegue", sender: nil)
+        DataManager.sharedInstance.login(email: username.text!, password: password.text!) { (loggedIn) in
+            DispatchQueue.main.async {
+                if(loggedIn!) {
+                    self.performSegue(withIdentifier: "loginsegue", sender: nil)
+                } else {
+                    self.stackView.shake();
+                }
+            }
         }
     }
     
