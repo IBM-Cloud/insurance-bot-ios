@@ -16,6 +16,7 @@ class UserNavigationViewController: UIViewController {
     @IBOutlet var userImageContainerView: UIView!
     @IBOutlet var avatarImage: UIImageView!
     
+    @IBOutlet var askQuestionButton: UIButton!
     
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -25,6 +26,14 @@ class UserNavigationViewController: UIViewController {
         self.performSegue(withIdentifier: "chatsegue", sender: nil)
     }
     
+    @IBAction func enableQuestionButton(_ sender: AnyObject) {
+        askQuestionButton.alpha = 0
+        askQuestionButton.isEnabled = true
+        askQuestionButton.isHidden = false
+        UIView.animate(withDuration: 0.3) {
+            self.askQuestionButton.alpha = 1
+        }
+    }
     
     override func viewWillAppear(_  animated: Bool) {
         super.viewWillAppear(animated)
