@@ -198,6 +198,7 @@
                     <connections>
                         <outlet property="password" destination="KCv-Ia-EVo" id="u8H-ex-uWI"/>
                         <outlet property="stackView" destination="z1Y-ip-Qwb" id="jyZ-cj-wtc"/>
+                        <outlet property="submitButton" destination="z1Y-ip-Qwb" id="cwr-1P-inA"/>
                         <outlet property="username" destination="vPk-Bc-BP2" id="caA-iU-KkV"/>
                         <segue destination="ajn-vk-EPy" kind="showDetail" identifier="loginsegue" action="showViewController:sender:" id="OAL-nN-6VU"/>
                     </connections>

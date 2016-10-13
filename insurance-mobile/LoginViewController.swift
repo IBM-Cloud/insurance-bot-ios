@@ -16,12 +16,11 @@ class LoginViewController: UIViewController {
     @IBOutlet var username : UITextField!
     @IBOutlet var password: UITextField!
     @IBOutlet var stackView: UIStackView!
+    @IBOutlet var submitButton: UIButton!
     
     @IBAction func login(sender: UIButton) {
-        // do something
         
-        print(username.text);
-        print(password.text);
+        submitButton.isEnabled = false
         
         DataManager.sharedInstance.login(email: username.text!, password: password.text!) { (loggedIn) in
             DispatchQueue.main.async {
@@ -29,6 +28,7 @@ class LoginViewController: UIViewController {
                     self.performSegue(withIdentifier: "loginsegue", sender: nil)
                 } else {
                     self.stackView.shake();
+                    self.submitButton.isEnabled = true
                 }
             }
         }
