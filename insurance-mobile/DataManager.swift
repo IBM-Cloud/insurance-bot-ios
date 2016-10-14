@@ -19,6 +19,13 @@ class DataManager {
     var baseURL = ""
     var loginURL = ""
     var chatURL = ""
+    
+    let config = URLSessionConfiguration.default
+    var session:URLSession? = nil
+    
+    init() {
+        session = URLSession(configuration: config)
+    }
 
     func login(email:String, password:String, completion:@escaping (Bool?)->()) -> Void {
         // perform login, then call completion callback with result 
@@ -32,7 +39,7 @@ class DataManager {
         NSLog("DataManager| using loginURL: " + target)
         
         let url:URL = URL(string: target)!
-        let session = URLSession.shared
+        //let session = URLSession.shared
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -41,7 +48,7 @@ class DataManager {
         let paramString = "email=" + email + "&password=" + password
         request.httpBody = paramString.data(using: String.Encoding.utf8)
         
-        let task = session.dataTask(with: request as URLRequest) {
+        let task = session!.dataTask(with: request as URLRequest) {
             
             (data, response, error) in
             
@@ -104,7 +111,7 @@ class DataManager {
     func postMessage(message:String?, context:JSON?, completion:@escaping (JSON?)->()) -> Void {
         
         let url:URL = URL(string: chatURL)!
-        let session = URLSession.shared
+        //let session = URLSession.shared
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -121,7 +128,7 @@ class DataManager {
         let paramString = paramJSON.rawString()!
         request.httpBody = paramString.data(using: String.Encoding.utf8)
         
-        let task = session.dataTask(with: request as URLRequest) {
+        let task = session!.dataTask(with: request as URLRequest) {
             
             (data, response, error) in
             
