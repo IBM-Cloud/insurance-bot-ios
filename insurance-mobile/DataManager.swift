@@ -11,11 +11,12 @@ import Foundation
 
 class DataManager {
     static let sharedInstance = DataManager();
-    var firstName = String()
-    var lastName = String()
-    var userName = String()
+    var firstName = ""
+    var lastName = ""
+    var userName = ""
     var loginStatus = false
-    var serviceUrl = String()
+    var baseURL = ""
+    var loginURL = ""
 
     func login(email:String, password:String, completion:@escaping (Bool?)->()) -> Void {
         // perform login, then call completion callback with result 
@@ -25,8 +26,8 @@ class DataManager {
         
         //parameters moved to configureMe.plist
         readConfigureMePList()
-        let target = (!serviceUrl.contains("") ? serviceUrl : "http://cloudco.mybluemix.net/login")
-        NSLog("DataManager| using serviceUrl: " + serviceUrl)
+        let target = (!loginURL.contains("") ? loginURL : "http://cloudco.mybluemix.net/login")
+        NSLog("DataManager| using loginURL: " + target)
         
         let url:URL = URL(string: target)!
         let session = URLSession.shared
@@ -95,8 +96,9 @@ class DataManager {
         let data = try! Data(contentsOf: url)
         let plist = try! PropertyListSerialization.propertyList(from: data, options: .mutableContainers, format: nil)
         let dictArray = plist as! [String:String]
-        serviceUrl = dictArray["url"]!+dictArray["login"]!
-        NSLog("DataManager| the serviceUrl: " + serviceUrl)
+        baseURL = dictArray["url"]!
+        loginURL = dictArray["url"]!+dictArray["login"]!
+        NSLog("DataManager| the baseURL: " + baseURL)
         
     }
     
