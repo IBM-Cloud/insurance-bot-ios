@@ -10,11 +10,5 @@
 	<string>http://dev-cloudco.mybluemix.net</string>
 	<key>login</key>
 	<string>/login</string>
-	<key>watsonConversationPassword</key>
-	<string></string>
-	<key>watsonConversationWorkspaceId</key>
-	<string></string>
-	<key>watsonConversationuUser</key>
-	<string></string>
 </dict>
 </plist>
