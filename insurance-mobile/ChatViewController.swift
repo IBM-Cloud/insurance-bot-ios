@@ -17,7 +17,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var textInput: UITextField!
     @IBOutlet var bottomBarConstraint: NSLayoutConstraint!
     
-    var stubdata = [
+    let dm = DataManager.sharedInstance
+    var chatContext:JSON = nil
+    
+    var chatData = [[String:Any]]()
+    /*
         [
             "time":"9:30",
             "message":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -38,7 +42,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             "time":"9:34",
             "message":"Sed ut perspiciatis unde omnis iste natus error ",
             "from":"server"
-        ]]
+        ]]*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +53,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         chatTableView.rowHeight = UITableViewAutomaticDimension
         chatTableView.estimatedRowHeight = 200
         refreshAndScrollTable(animated:false)
+        
+        //send empty request to establish conversation
+        messageSend(message: nil, context: nil)
     }
     
     deinit {
@@ -63,13 +70,22 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func sendMessage(_ sender: AnyObject) {
         let value = textInput.text
         if ((value?.characters.count)! > 0) {
-            //print(value);
-            
-            //this is mock implementation, will need to be replaced
-            stubdata.append(["time":"9:40", "message":value!, "from":"me"])
-            refreshAndScrollTable(animated:true)
-            
+            displayMessage(message: value!, from: "me")
             textInput.text = ""
+            messageSend(message: value, context: self.chatContext)
+        }
+    }
+    
+    func messageSend(message:String?, context:JSON?) {
+        dm.postMessage(message: message, context:context) { (json) in
+            if let json = json {
+                
+                if let responseText = json["output"]["text"].string {
+                    self.displayMessage(message: responseText, from: "server")
+                }
+                
+                self.chatContext = json["context"]
+            }
         }
     }
     
@@ -77,9 +93,16 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    func displayMessage(message:String, from:String) {
+        chatData.append(["time":"9:40", "message":message, "from":from])
+        refreshAndScrollTable(animated:true)
+    }
+    
     func refreshAndScrollTable(animated:Bool) {
-        chatTableView.reloadData()
-        chatTableView.scrollToLastRow(animated:animated)
+        DispatchQueue.main.async {
+            self.chatTableView.reloadData()
+            self.chatTableView.scrollToLastRow(animated:animated)
+        }
     }
     
     
@@ -108,14 +131,14 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return stubdata.count
+        return chatData.count
     }
     
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let messageData = stubdata[indexPath.row]
+        let messageData = chatData[indexPath.row]
         var cell:ChatMessageViewCell? = nil
-        if ( messageData["from"] != "me" ) {
+        if ( (messageData["from"] as? String) != "me" ) {
             cell = tableView.dequeueReusableCell(withIdentifier: "serverChatViewCell") as? ChatMessageViewCell
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "myChatViewCell") as? ChatMessageViewCell

@@ -8,6 +8,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class DataManager {
     static let sharedInstance = DataManager();
@@ -17,6 +18,7 @@ class DataManager {
     var loginStatus = false
     var baseURL = ""
     var loginURL = ""
+    var chatURL = ""
 
     func login(email:String, password:String, completion:@escaping (Bool?)->()) -> Void {
         // perform login, then call completion callback with result 
@@ -46,32 +48,28 @@ class DataManager {
             guard let data = data, let _:URLResponse = response  , error == nil else {
                 NSLog("DataManager| error :")
                 print(response)
-                
                 completion(false)
                 return
             }
             
-            let dataString = String(data: data, encoding: String.Encoding.utf8)
-            NSLog("DataManager| dataString :" + dataString!)
-            let dictionary = self.convertStringToDictionary(text: dataString!)
+            let json = JSON(data: data)
             
-            if let fname = dictionary?["fname"] {
-                self.firstName = fname as! String
+            if let fname = json["fname"].string {
+                self.firstName = fname
             }
             
-            if let lname = dictionary?["lname"] {
-                self.lastName = lname as! String
+            if let lname = json["lname"].string {
+                self.lastName = lname
             }
             
-            if let uname = dictionary?["username"] {
-                self.userName = uname as! String
+            if let username = json["username"].string {
+                self.userName = username
             }
             
-            if let outcome = dictionary?["outcome"] {
+            if let outcome = json["outcome"].string {
                 self.loginStatus = (outcome.isEqual("success"))
-                NSLog("DataManager| login status: " + (outcome as! String))
+                NSLog("DataManager| login status: " + (outcome))
             }
-            
             completion(self.loginStatus)
         }
         task.resume()
@@ -98,36 +96,46 @@ class DataManager {
         let dictArray = plist as! [String:String]
         baseURL = dictArray["url"]!
         loginURL = dictArray["url"]!+dictArray["login"]!
+        chatURL = dictArray["url"]!+dictArray["ana"]!
         NSLog("DataManager| the baseURL: " + baseURL)
         
     }
     
-    func postMessage(message:String, completion:(AnyObject?)->()) -> Void {
-        // send chat message, then call completion with result
+    func postMessage(message:String?, context:JSON?, completion:@escaping (JSON?)->()) -> Void {
         
-        /*
-         Gonna have to look at ana.js together
-         so for the date request she requires an input of YYYY-MM-DD and the amount that gets sent for the claim has to be parsed down to a number otherwise she’ll reject it
-         You’re making a POST to /api/ana
-         The object she accepts is params = { “text” : usermessage, “context” : context object sent after first request}
-         So when the service tosses a response back you need to store the res.context to be passed with your next request.
-         Finally, if when you get the context back the context.claim_step is set to “verify” that indicates a claim needs to be filed
-         And you’ll have to do all the logic for calling /submitClaim
-         Once a claim has been filed the following in the context object have to be reset to null: context.claim_step = '';
-         context.claim_date = '';
-         context.claim_provider = '';
-         context.claim_amount = '';
-         context.system = '';
-         At the very least context.claim_step has to be reset otherwise it’ll forever trigger a file claim
-         And that’s it
-         
-         o.k. cloudco.mybluemix.net/api/ana and parameters in the post. I need to keep context between calls. Could you confirm :slightly_smiling_face: ?
-         and dev- as well
-         we login to service thru  dev-cloudco.mybluemix.net/login. and your microservice is exposed thru api/ana - did I get it right?
-         Yep
-         */
+        let url:URL = URL(string: chatURL)!
+        let session = URLSession.shared
         
-        completion(nil)
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
+        
+        var paramJSON:JSON = [:]
+        if let message = message {
+            paramJSON["text"].string = message
+        }
+        if let context = context {
+            paramJSON["context"] = context
+        }
+        
+        let paramString = paramJSON.rawString()!
+        request.httpBody = paramString.data(using: String.Encoding.utf8)
+        
+        let task = session.dataTask(with: request as URLRequest) {
+            
+            (data, response, error) in
+            
+           guard let data = data, let _:URLResponse = response  , error == nil else {
+                NSLog("DataManager| postMessage error :")
+                print(response)
+                completion(nil)
+                return
+            }
+            
+            let json = JSON(data: data)
+            completion(json)
+        }
+        task.resume()
     }
     
 }
