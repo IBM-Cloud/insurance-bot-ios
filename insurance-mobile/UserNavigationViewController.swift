@@ -30,12 +30,12 @@ class UserNavigationViewController: UIViewController {
     }
     
     @IBAction func enableQuestionButton(_ sender: AnyObject) {
-        askQuestionButton.alpha = 0
+        /*askQuestionButton.alpha = 0
         askQuestionButton.isEnabled = true
         askQuestionButton.isHidden = false
         UIView.animate(withDuration: 0.3) {
             self.askQuestionButton.alpha = 1
-        }
+        }*/
     }
     
     override func viewWillAppear(_  animated: Bool) {

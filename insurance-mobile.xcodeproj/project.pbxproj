@@ -47,6 +47,7 @@
 		5DA8E9B81DB01BFD00FA0A0D /* CommonCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9B51DB01BFD00FA0A0D /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5DA8E9B91DB01BFD00FA0A0D /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9B61DB01BFD00FA0A0D /* Crypto.framework */; };
 		5DA8E9BA1DB01BFD00FA0A0D /* Crypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9B61DB01BFD00FA0A0D /* Crypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DA8E9BC1DB151F900FA0A0D /* umbella.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9BB1DB151F900FA0A0D /* umbella.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -105,6 +106,7 @@
 		5DA8E9B31DB01B6200FA0A0D /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		5DA8E9B51DB01BFD00FA0A0D /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/iOS/CommonCrypto.framework; sourceTree = "<group>"; };
 		5DA8E9B61DB01BFD00FA0A0D /* Crypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crypto.framework; path = Carthage/Build/iOS/Crypto.framework; sourceTree = "<group>"; };
+		5DA8E9BB1DB151F900FA0A0D /* umbella.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = umbella.png; path = Assets.xcassets/umbella.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 		5DA8E9801DADC62600FA0A0D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5DA8E9BB1DB151F900FA0A0D /* umbella.png */,
 				5DA8E9A91DAF36C400FA0A0D /* left-arrow.png */,
 				5DA8E9AA1DAF36C400FA0A0D /* left-arrow@2.png */,
 				5DA8E9AB1DAF36C400FA0A0D /* right-arrow.png */,
@@ -274,6 +277,7 @@
 				5DA8E9921DADD52B00FA0A0D /* mic.png in Resources */,
 				5DA8E9981DADD75300FA0A0D /* send@2.png in Resources */,
 				5DA8E9841DADC6DF00FA0A0D /* gear.png in Resources */,
+				5DA8E9BC1DB151F900FA0A0D /* umbella.png in Resources */,
 				5DA8E9941DADD57300FA0A0D /* send.png in Resources */,
 				22157E781DA40214008B5E1C /* LaunchScreen.storyboard in Resources */,
 				5DA8E9971DADD75300FA0A0D /* mic@2.png in Resources */,
