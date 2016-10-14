@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>readme</key>
+	<string>please point the environment *url* to your service url</string>
+	<key>ana</key>
+	<string>/api/ana</string>
+	<key>url</key>
+	<string>http://dev-cloudco.mybluemix.net</string>
+	<key>login</key>
+	<string>/login</string>
+	<key>watsonConversationPassword</key>
+	<string></string>
+	<key>watsonConversationWorkspaceId</key>
+	<string></string>
+	<key>watsonConversationuUser</key>
+	<string></string>
+</dict>
+</plist>

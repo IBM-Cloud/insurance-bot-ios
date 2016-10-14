@@ -56,6 +56,7 @@
 		5DA8E9CB1DB156A200FA0A0D /* icon76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9C31DB156A100FA0A0D /* icon76x76.png */; };
 		5DA8E9CC1DB156A200FA0A0D /* icon80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9C41DB156A100FA0A0D /* icon80x80.png */; };
 		5DA8E9CD1DB156A200FA0A0D /* icon87x87.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9C51DB156A100FA0A0D /* icon87x87.png */; };
+		D743F7F01DB157A700C59573 /* configureMe.plist in Resources */ = {isa = PBXBuildFile; fileRef = D743F7EF1DB157A700C59573 /* configureMe.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -123,6 +124,7 @@
 		5DA8E9C31DB156A100FA0A0D /* icon76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon76x76.png; sourceTree = "<group>"; };
 		5DA8E9C41DB156A100FA0A0D /* icon80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon80x80.png; sourceTree = "<group>"; };
 		5DA8E9C51DB156A100FA0A0D /* icon87x87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon87x87.png; sourceTree = "<group>"; };
+		D743F7EF1DB157A700C59573 /* configureMe.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = configureMe.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 		22157E691DA40214008B5E1C /* insurance-mobile */ = {
 			isa = PBXGroup;
 			children = (
+				D743F7EF1DB157A700C59573 /* configureMe.plist */,
 				5DA8E9801DADC62600FA0A0D /* images */,
 				22157E6A1DA40214008B5E1C /* AppDelegate.swift */,
 				22157E6C1DA40214008B5E1C /* LoginViewController.swift */,
@@ -310,6 +313,7 @@
 				5DA8E9AD1DAF36C400FA0A0D /* left-arrow.png in Resources */,
 				5DA8E9921DADD52B00FA0A0D /* mic.png in Resources */,
 				5DA8E9981DADD75300FA0A0D /* send@2.png in Resources */,
+				D743F7F01DB157A700C59573 /* configureMe.plist in Resources */,
 				5DA8E9841DADC6DF00FA0A0D /* gear.png in Resources */,
 				5DA8E9BC1DB151F900FA0A0D /* umbella.png in Resources */,
 				5DA8E9941DADD57300FA0A0D /* send.png in Resources */,
