@@ -48,6 +48,14 @@
 		5DA8E9B91DB01BFD00FA0A0D /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9B61DB01BFD00FA0A0D /* Crypto.framework */; };
 		5DA8E9BA1DB01BFD00FA0A0D /* Crypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9B61DB01BFD00FA0A0D /* Crypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5DA8E9BC1DB151F900FA0A0D /* umbella.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9BB1DB151F900FA0A0D /* umbella.png */; };
+		5DA8E9C61DB156A200FA0A0D /* icon120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9BE1DB156A100FA0A0D /* icon120x120.png */; };
+		5DA8E9C71DB156A200FA0A0D /* icon152x152.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9BF1DB156A100FA0A0D /* icon152x152.png */; };
+		5DA8E9C81DB156A200FA0A0D /* icon180x180.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9C01DB156A100FA0A0D /* icon180x180.png */; };
+		5DA8E9C91DB156A200FA0A0D /* icon512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9C11DB156A100FA0A0D /* icon512x512.png */; };
+		5DA8E9CA1DB156A200FA0A0D /* icon58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9C21DB156A100FA0A0D /* icon58x58.png */; };
+		5DA8E9CB1DB156A200FA0A0D /* icon76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9C31DB156A100FA0A0D /* icon76x76.png */; };
+		5DA8E9CC1DB156A200FA0A0D /* icon80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9C41DB156A100FA0A0D /* icon80x80.png */; };
+		5DA8E9CD1DB156A200FA0A0D /* icon87x87.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9C51DB156A100FA0A0D /* icon87x87.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -107,6 +115,14 @@
 		5DA8E9B51DB01BFD00FA0A0D /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/iOS/CommonCrypto.framework; sourceTree = "<group>"; };
 		5DA8E9B61DB01BFD00FA0A0D /* Crypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crypto.framework; path = Carthage/Build/iOS/Crypto.framework; sourceTree = "<group>"; };
 		5DA8E9BB1DB151F900FA0A0D /* umbella.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = umbella.png; path = Assets.xcassets/umbella.png; sourceTree = "<group>"; };
+		5DA8E9BE1DB156A100FA0A0D /* icon120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120x120.png; sourceTree = "<group>"; };
+		5DA8E9BF1DB156A100FA0A0D /* icon152x152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon152x152.png; sourceTree = "<group>"; };
+		5DA8E9C01DB156A100FA0A0D /* icon180x180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon180x180.png; sourceTree = "<group>"; };
+		5DA8E9C11DB156A100FA0A0D /* icon512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon512x512.png; sourceTree = "<group>"; };
+		5DA8E9C21DB156A100FA0A0D /* icon58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon58x58.png; sourceTree = "<group>"; };
+		5DA8E9C31DB156A100FA0A0D /* icon76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon76x76.png; sourceTree = "<group>"; };
+		5DA8E9C41DB156A100FA0A0D /* icon80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon80x80.png; sourceTree = "<group>"; };
+		5DA8E9C51DB156A100FA0A0D /* icon87x87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon87x87.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +191,7 @@
 		5DA8E9801DADC62600FA0A0D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5DA8E9BD1DB156A100FA0A0D /* icons */,
 				5DA8E9BB1DB151F900FA0A0D /* umbella.png */,
 				5DA8E9A91DAF36C400FA0A0D /* left-arrow.png */,
 				5DA8E9AA1DAF36C400FA0A0D /* left-arrow@2.png */,
@@ -199,6 +216,22 @@
 				5DA8E9811DADC62E00FA0A0D /* avater.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		5DA8E9BD1DB156A100FA0A0D /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				5DA8E9BE1DB156A100FA0A0D /* icon120x120.png */,
+				5DA8E9BF1DB156A100FA0A0D /* icon152x152.png */,
+				5DA8E9C01DB156A100FA0A0D /* icon180x180.png */,
+				5DA8E9C11DB156A100FA0A0D /* icon512x512.png */,
+				5DA8E9C21DB156A100FA0A0D /* icon58x58.png */,
+				5DA8E9C31DB156A100FA0A0D /* icon76x76.png */,
+				5DA8E9C41DB156A100FA0A0D /* icon80x80.png */,
+				5DA8E9C51DB156A100FA0A0D /* icon87x87.png */,
+			);
+			name = icons;
+			path = Assets.xcassets/icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +296,7 @@
 			files = (
 				5DA8E9A01DAE7B2600FA0A0D /* heart@2.png in Resources */,
 				5DA8E9AF1DAF36C400FA0A0D /* right-arrow.png in Resources */,
+				5DA8E9CA1DB156A200FA0A0D /* icon58x58.png in Resources */,
 				5DA8E9A11DAE7B2600FA0A0D /* home@2.png in Resources */,
 				5DA8E9821DADC62E00FA0A0D /* avater.png in Resources */,
 				5DA8E9B01DAF36C400FA0A0D /* right-arrow@2.png in Resources */,
@@ -280,13 +314,20 @@
 				5DA8E9BC1DB151F900FA0A0D /* umbella.png in Resources */,
 				5DA8E9941DADD57300FA0A0D /* send.png in Resources */,
 				22157E781DA40214008B5E1C /* LaunchScreen.storyboard in Resources */,
+				5DA8E9C91DB156A200FA0A0D /* icon512x512.png in Resources */,
 				5DA8E9971DADD75300FA0A0D /* mic@2.png in Resources */,
 				22157E751DA40214008B5E1C /* Assets.xcassets in Resources */,
+				5DA8E9CC1DB156A200FA0A0D /* icon80x80.png in Resources */,
 				5DA8E98D1DADCBE500FA0A0D /* auto.png in Resources */,
 				5DA8E98F1DADCBE500FA0A0D /* home.png in Resources */,
 				5DA8E9881DADC8CC00FA0A0D /* chevron.png in Resources */,
 				5DA8E9861DADC78100FA0A0D /* gear-small.png in Resources */,
+				5DA8E9CB1DB156A200FA0A0D /* icon76x76.png in Resources */,
 				22157E701DA40214008B5E1C /* Main.storyboard in Resources */,
+				5DA8E9C61DB156A200FA0A0D /* icon120x120.png in Resources */,
+				5DA8E9CD1DB156A200FA0A0D /* icon87x87.png in Resources */,
+				5DA8E9C71DB156A200FA0A0D /* icon152x152.png in Resources */,
+				5DA8E9C81DB156A200FA0A0D /* icon180x180.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
