@@ -77,6 +77,7 @@ class DataManager {
                 self.loginStatus = (outcome.isEqual("success"))
                 NSLog("DataManager| login status: " + (outcome))
             }
+            
             completion(self.loginStatus)
         }
         task.resume()
@@ -127,6 +128,8 @@ class DataManager {
         
         let paramString = paramJSON.rawString()!
         request.httpBody = paramString.data(using: String.Encoding.utf8)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
         
         let task = session!.dataTask(with: request as URLRequest) {
             
