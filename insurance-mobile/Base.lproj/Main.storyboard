@@ -223,7 +223,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uj7-3Y-Nw0">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvP-fW-SiX">
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvP-fW-SiX">
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="GUU-BJ-xga"/>
                                                     <constraint firstAttribute="height" constant="75" id="zIW-bc-TH9"/>
@@ -240,7 +240,7 @@
                                                     <action selector="enableQuestionButton:" destination="ajn-vk-EPy" eventType="touchUpInside" id="ND5-Gs-9SQ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8I-7C-c8Z">
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8I-7C-c8Z">
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="HMr-E5-79F"/>
                                                     <constraint firstAttribute="height" constant="75" id="IZV-jN-1ZK"/>
@@ -249,7 +249,7 @@
                                                 </constraints>
                                                 <state key="normal" image="travel"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lig-8y-oCJ">
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lig-8y-oCJ">
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="88k-2w-p9U"/>
                                                     <constraint firstAttribute="width" constant="80" id="MTQ-SB-BXF"/>
@@ -381,39 +381,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIu-M3-gpw">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="KJV-HE-HX6"/>
-                                </constraints>
-                                <state key="normal" title="Ask a question">
-                                    <color key="titleColor" red="0.25882352941176473" green="0.42745098039215684" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.25882352941176473" green="0.42745098039215684" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="showChatViewWithSender:" destination="ajn-vk-EPy" eventType="touchUpInside" id="CVV-nY-BO4"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3hr-yh-56R" firstAttribute="top" secondItem="tsb-bj-fHt" secondAttribute="bottom" constant="161" id="53G-D4-jfG"/>
                             <constraint firstItem="PAx-HM-W31" firstAttribute="top" secondItem="3hr-yh-56R" secondAttribute="bottom" constant="81" id="6YD-Na-Ljv"/>
                             <constraint firstItem="3hr-yh-56R" firstAttribute="leading" secondItem="csl-CU-TlU" secondAttribute="leading" constant="-1" id="Fv9-KH-Rzz"/>
-                            <constraint firstItem="PAx-HM-W31" firstAttribute="top" secondItem="gIu-M3-gpw" secondAttribute="bottom" constant="34" id="I3h-f2-YhO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gIu-M3-gpw" secondAttribute="trailing" constant="17" id="MBs-I8-gRz"/>
                             <constraint firstAttribute="trailing" secondItem="Nwy-Jg-qm4" secondAttribute="trailing" constant="-1" id="Mhf-sS-GpU"/>
-                            <constraint firstItem="gIu-M3-gpw" firstAttribute="leading" secondItem="csl-CU-TlU" secondAttribute="leadingMargin" constant="17" id="RNL-Lq-jSf"/>
                             <constraint firstItem="Nwy-Jg-qm4" firstAttribute="top" secondItem="csl-CU-TlU" secondAttribute="top" constant="-1" id="X3v-qO-Bl1"/>
                             <constraint firstAttribute="trailing" secondItem="3hr-yh-56R" secondAttribute="trailing" constant="-1" id="cEN-l1-fjb"/>
                             <constraint firstItem="Nwy-Jg-qm4" firstAttribute="leading" secondItem="csl-CU-TlU" secondAttribute="leading" constant="-1" id="pRy-Jm-PIf"/>
@@ -426,7 +400,6 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
-                        <outlet property="askQuestionButton" destination="gIu-M3-gpw" id="h64-Ob-gVk"/>
                         <outlet property="avatarImage" destination="3PS-nB-jv3" id="Sjc-pW-KEW"/>
                         <outlet property="userFullNameLabel" destination="7YQ-ks-Nx4" id="CLn-Ed-sQO"/>
                         <outlet property="userImageContainerView" destination="Nwy-Jg-qm4" id="Lzw-fb-rpk"/>

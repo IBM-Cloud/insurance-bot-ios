@@ -26,7 +26,7 @@ class UserNavigationViewController: UIViewController {
 
     @IBAction func showChatView(sender: UIButton) {
         
-        self.performSegue(withIdentifier: "chatsegue", sender: nil)
+        //self.performSegue(withIdentifier: "chatsegue", sender: nil)
     }
     
     @IBAction func enableQuestionButton(_ sender: AnyObject) {
@@ -36,6 +36,9 @@ class UserNavigationViewController: UIViewController {
         UIView.animate(withDuration: 0.3) {
             self.askQuestionButton.alpha = 1
         }*/
+        
+        
+        self.performSegue(withIdentifier: "chatsegue", sender: nil)
     }
     
     override func viewWillAppear(_  animated: Bool) {

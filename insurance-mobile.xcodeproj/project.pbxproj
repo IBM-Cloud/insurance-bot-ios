@@ -13,9 +13,10 @@
 		22157E731DA40214008B5E1C /* insurance_mobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22157E711DA40214008B5E1C /* insurance_mobile.xcdatamodeld */; };
 		22157E751DA40214008B5E1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22157E741DA40214008B5E1C /* Assets.xcassets */; };
 		22157E781DA40214008B5E1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22157E761DA40214008B5E1C /* LaunchScreen.storyboard */; };
+		5D82738E1DB47D9700AB11D7 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D82738C1DB47D9700AB11D7 /* CommonCrypto.framework */; };
+		5D82738F1DB47D9700AB11D7 /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D82738D1DB47D9700AB11D7 /* Crypto.framework */; };
+		5D8273911DB47DA200AB11D7 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8273901DB47DA200AB11D7 /* SwiftyJSON.framework */; };
 		5DA8E9741DAD63AD00FA0A0D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8E9731DAD63AD00FA0A0D /* DataManager.swift */; };
-		5DA8E9751DAD66E300FA0A0D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9711DAD5B0900FA0A0D /* SwiftyJSON.framework */; };
-		5DA8E9761DAD66E300FA0A0D /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9711DAD5B0900FA0A0D /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5DA8E9791DAD682700FA0A0D /* UserNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8E9781DAD682700FA0A0D /* UserNavigationViewController.swift */; };
 		5DA8E97B1DAD6A1700FA0A0D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8E97A1DAD6A1700FA0A0D /* ChatViewController.swift */; };
 		5DA8E97F1DAD881200FA0A0D /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8E97E1DAD881200FA0A0D /* UIViewExtension.swift */; };
@@ -43,10 +44,6 @@
 		5DA8E9AF1DAF36C400FA0A0D /* right-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9AB1DAF36C400FA0A0D /* right-arrow.png */; };
 		5DA8E9B01DAF36C400FA0A0D /* right-arrow@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9AC1DAF36C400FA0A0D /* right-arrow@2.png */; };
 		5DA8E9B41DB01B6200FA0A0D /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9B31DB01B6200FA0A0D /* Cartfile */; };
-		5DA8E9B71DB01BFD00FA0A0D /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9B51DB01BFD00FA0A0D /* CommonCrypto.framework */; };
-		5DA8E9B81DB01BFD00FA0A0D /* CommonCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9B51DB01BFD00FA0A0D /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5DA8E9B91DB01BFD00FA0A0D /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9B61DB01BFD00FA0A0D /* Crypto.framework */; };
-		5DA8E9BA1DB01BFD00FA0A0D /* Crypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA8E9B61DB01BFD00FA0A0D /* Crypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5DA8E9BC1DB151F900FA0A0D /* umbella.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9BB1DB151F900FA0A0D /* umbella.png */; };
 		5DA8E9C61DB156A200FA0A0D /* icon120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9BE1DB156A100FA0A0D /* icon120x120.png */; };
 		5DA8E9C71DB156A200FA0A0D /* icon152x152.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8E9BF1DB156A100FA0A0D /* icon152x152.png */; };
@@ -66,9 +63,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5DA8E9BA1DB01BFD00FA0A0D /* Crypto.framework in Embed Frameworks */,
-				5DA8E9B81DB01BFD00FA0A0D /* CommonCrypto.framework in Embed Frameworks */,
-				5DA8E9761DAD66E300FA0A0D /* SwiftyJSON.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,7 +78,9 @@
 		22157E741DA40214008B5E1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22157E771DA40214008B5E1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22157E791DA40214008B5E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5DA8E9711DAD5B0900FA0A0D /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		5D82738C1DB47D9700AB11D7 /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/iOS/CommonCrypto.framework; sourceTree = "<group>"; };
+		5D82738D1DB47D9700AB11D7 /* Crypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crypto.framework; path = Carthage/Build/iOS/Crypto.framework; sourceTree = "<group>"; };
+		5D8273901DB47DA200AB11D7 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		5DA8E9731DAD63AD00FA0A0D /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		5DA8E9781DAD682700FA0A0D /* UserNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNavigationViewController.swift; sourceTree = "<group>"; };
 		5DA8E97A1DAD6A1700FA0A0D /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -113,8 +109,6 @@
 		5DA8E9AB1DAF36C400FA0A0D /* right-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "right-arrow.png"; path = "Assets.xcassets/right-arrow.png"; sourceTree = "<group>"; };
 		5DA8E9AC1DAF36C400FA0A0D /* right-arrow@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "right-arrow@2.png"; path = "Assets.xcassets/right-arrow@2.png"; sourceTree = "<group>"; };
 		5DA8E9B31DB01B6200FA0A0D /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		5DA8E9B51DB01BFD00FA0A0D /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/iOS/CommonCrypto.framework; sourceTree = "<group>"; };
-		5DA8E9B61DB01BFD00FA0A0D /* Crypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crypto.framework; path = Carthage/Build/iOS/Crypto.framework; sourceTree = "<group>"; };
 		5DA8E9BB1DB151F900FA0A0D /* umbella.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = umbella.png; path = Assets.xcassets/umbella.png; sourceTree = "<group>"; };
 		5DA8E9BE1DB156A100FA0A0D /* icon120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120x120.png; sourceTree = "<group>"; };
 		5DA8E9BF1DB156A100FA0A0D /* icon152x152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon152x152.png; sourceTree = "<group>"; };
@@ -132,9 +126,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DA8E9B91DB01BFD00FA0A0D /* Crypto.framework in Frameworks */,
-				5DA8E9B71DB01BFD00FA0A0D /* CommonCrypto.framework in Frameworks */,
-				5DA8E9751DAD66E300FA0A0D /* SwiftyJSON.framework in Frameworks */,
+				5D8273911DB47DA200AB11D7 /* SwiftyJSON.framework in Frameworks */,
+				5D82738E1DB47D9700AB11D7 /* CommonCrypto.framework in Frameworks */,
+				5D82738F1DB47D9700AB11D7 /* Crypto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,9 +178,9 @@
 		5DA8E9701DAD5B0900FA0A0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5DA8E9B51DB01BFD00FA0A0D /* CommonCrypto.framework */,
-				5DA8E9B61DB01BFD00FA0A0D /* Crypto.framework */,
-				5DA8E9711DAD5B0900FA0A0D /* SwiftyJSON.framework */,
+				5D8273901DB47DA200AB11D7 /* SwiftyJSON.framework */,
+				5D82738C1DB47D9700AB11D7 /* CommonCrypto.framework */,
+				5D82738D1DB47D9700AB11D7 /* Crypto.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -248,6 +242,7 @@
 				22157E641DA40214008B5E1C /* Frameworks */,
 				22157E651DA40214008B5E1C /* Resources */,
 				5DA8E9771DAD66E300FA0A0D /* Embed Frameworks */,
+				5D82738B1DB47D1B00AB11D7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -270,6 +265,7 @@
 				TargetAttributes = {
 					22157E661DA40214008B5E1C = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = D67FV253XK;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -336,6 +332,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D82738B1DB47D1B00AB11D7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/CommonCrypto.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Crypto.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		22157E631DA40214008B5E1C /* Sources */ = {
@@ -471,15 +486,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = D67FV253XK;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "insurance-mobile/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.ibm.com.insurance-mobile";
+				PRODUCT_BUNDLE_IDENTIFIER = "trice.org.ibm.com.insurance-mobile";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -488,15 +508,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = D67FV253XK;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "insurance-mobile/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.ibm.com.insurance-mobile";
+				PRODUCT_BUNDLE_IDENTIFIER = "trice.org.ibm.com.insurance-mobile";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
