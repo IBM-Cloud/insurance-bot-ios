@@ -17,7 +17,7 @@ A native iOS app to interact with the chat bot integrated in the [Cloud Insuranc
 
 ## Running the application with the iOS simulator
 
-1. The iOS app on the [Cloud Insurance Bot app](https://github.com/IBM-Bluemix/insurance-bot). Make sure to deploy this app first. The simpler path to deploy this app is to use the [Cloud Insurance toolchain](https://github.com/IBM-Bluemix/insurance-toolchain).
+1. The iOS app depends on the [Cloud Insurance Bot app](https://github.com/IBM-Bluemix/insurance-bot). Make sure to deploy this app first. The simpler path to deploy this app is to use the [Cloud Insurance toolchain](https://github.com/IBM-Bluemix/insurance-toolchain).
 
 1. Ensure Carthage is installed in your environment. You can get the latest release [here](https://github.com/Carthage/Carthage/releases).
 
