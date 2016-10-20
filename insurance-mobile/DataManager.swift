@@ -17,13 +17,27 @@ class DataManager {
     var userName = ""
     var loginStatus = false
     var baseURL = ""
-    var loginURL = ""
-    var chatURL = ""
+    var defaultURL = ""
+    var loginPath = ""
+    var chatPath = ""
     
     let config = URLSessionConfiguration.default
     var session:URLSession? = nil
     
     init() {
+        
+        //parameters moved to configureMe.plist
+        readConfigureMePList()
+        
+        let appDefaults = [String:AnyObject]()
+        UserDefaults.standard.register(defaults: appDefaults)
+        
+        if let apiHost = UserDefaults.standard.string(forKey: "api_host") {
+            baseURL = apiHost
+        } else {
+            baseURL = defaultURL
+        }
+        
         session = URLSession(configuration: config)
     }
 
@@ -33,9 +47,7 @@ class DataManager {
         NSLog("DataManager| email: " + email)
         NSLog("DataManager| password: " + password)
         
-        //parameters moved to configureMe.plist
-        readConfigureMePList()
-        let target = (!loginURL.contains("") ? loginURL : "http://cloudco.mybluemix.net/login")
+        let target = baseURL + loginPath
         NSLog("DataManager| using loginURL: " + target)
         
         let url:URL = URL(string: target)!
@@ -96,23 +108,23 @@ class DataManager {
     
     //read configureMe.plist properties
     func readConfigureMePList(){
+        
+        
         NSLog("DataManager| reading the configureMe.plist ")
         let path = Bundle.main.path(forResource: "configureMe", ofType: "plist")!
         let url = URL(fileURLWithPath: path)
         let data = try! Data(contentsOf: url)
         let plist = try! PropertyListSerialization.propertyList(from: data, options: .mutableContainers, format: nil)
         let dictArray = plist as! [String:String]
-        baseURL = dictArray["url"]!
-        loginURL = dictArray["url"]!+dictArray["login"]!
-        chatURL = dictArray["url"]!+dictArray["ana"]!
-        NSLog("DataManager| the baseURL: " + baseURL)
+        defaultURL = dictArray["default_api_host"]!
+        loginPath = dictArray["login"]!
+        chatPath = dictArray["ana"]!
         
     }
     
     func postMessage(message:String?, context:JSON?, completion:@escaping (JSON?)->()) -> Void {
         
-        let url:URL = URL(string: chatURL)!
-        //let session = URLSession.shared
+        let url:URL = URL(string: baseURL + chatPath)!
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"

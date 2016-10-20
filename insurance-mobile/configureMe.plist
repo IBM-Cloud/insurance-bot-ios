@@ -6,8 +6,8 @@
 	<string>please point the environment *url* to your service url</string>
 	<key>ana</key>
 	<string>/api/ana</string>
-	<key>url</key>
-	<string>http://dev-cloudco.mybluemix.net</string>
+	<key>default_api_host</key>
+	<string>http://cloudco.mybluemix.net</string>
 	<key>login</key>
 	<string>/login</string>
 </dict>
