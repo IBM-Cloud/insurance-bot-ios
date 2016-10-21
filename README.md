@@ -1,5 +1,7 @@
 # Cloud Insurance Co. - iOS client
 
+[![Build Status](https://travis-ci.org/IBM-Bluemix/insurance-bot-ios.svg?branch=master)](https://travis-ci.org/IBM-Bluemix/insurance-bot-ios)
+
 This service is part of the larger [Cloud Insurance Co.](https://github.com/IBM-Bluemix/cloudco-insurance) project.
 
 # Overview
