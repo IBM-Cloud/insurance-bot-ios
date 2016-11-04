@@ -33,7 +33,11 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    
+  
+    @IBAction func signup(_ sender: UIButton) {
+      UIApplication.shared.open(URL(string: DataManager.sharedInstance.baseURL)!)
+    }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

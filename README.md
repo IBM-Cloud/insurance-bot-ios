@@ -40,12 +40,12 @@ A native iOS app to interact with the chat bot integrated in the [Cloud Insuranc
 1. Get the dependencies
 
   ```
-  carthage update
+  carthage update --platform iOS --no-use-binaries
   ```
 
 1. Open XCode project `insurance-mobile.xcodeproj`
 
-1. Edit `insurance-mobile/configureMe.plist` and replace the `url` property with the location where you deployed the `insurance-bot` app.
+1. Edit `insurance-mobile/configureMe.plist` and replace the `default_api_host` property with the location where you deployed the `insurance-bot` app.
 
 1. Run the app
 
