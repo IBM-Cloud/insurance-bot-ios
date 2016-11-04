@@ -4,5 +4,5 @@ before_install:
   - brew update
   - brew outdated carthage || brew upgrade carthage
 script:
-  - carthage update --platform iOS --no-use-binaries
+  - carthage bootstrap
   - xcodebuild -project insurance-mobile.xcodeproj -sdk iphonesimulator
