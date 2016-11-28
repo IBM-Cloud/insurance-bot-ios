@@ -40,7 +40,7 @@ A native iOS app to interact with the chat bot integrated in the [Cloud Insuranc
 1. Get the dependencies
 
   ```
-  carthage bootstrap
+  carthage bootstrap --platform iOS --no-use-binaries
   ```
 
 1. Open XCode project `insurance-mobile.xcodeproj`
