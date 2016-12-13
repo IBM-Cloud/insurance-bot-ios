@@ -137,7 +137,9 @@ class DataManager {
         if let context = context {
             paramJSON["context"] = context
         }
-        
+        // pass our local time to Ana so she can resolve relative dates correctly
+        paramJSON["user_time"].string = ISO8601DateFormatter().string(from: Date())
+      
         let paramString = paramJSON.rawString()!
         request.httpBody = paramString.data(using: String.Encoding.utf8)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
