@@ -57,7 +57,7 @@ class DataManager {
         request.httpMethod = "POST"
         request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
         
-        let paramString = "email=" + email + "&password=" + password
+        let paramString = "username=" + email + "&password=" + password
         request.httpBody = paramString.data(using: String.Encoding.utf8)
         
         let task = session!.dataTask(with: request as URLRequest) {
@@ -83,13 +83,9 @@ class DataManager {
             
             if let username = json["username"].string {
                 self.userName = username
+                self.loginStatus = true
             }
-            
-            if let outcome = json["outcome"].string {
-                self.loginStatus = (outcome.isEqual("success"))
-                NSLog("DataManager| login status: " + (outcome))
-            }
-            
+          
             completion(self.loginStatus)
         }
         task.resume()
